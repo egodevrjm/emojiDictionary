@@ -16,32 +16,21 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var emojiCreatedLabel: UILabel!
     
-    var emoji = ""
-    var emojiName = ""
-    var emojiCat = ""
-    var emojiCreated = ""
+    var emoji = Emoji()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
+        showEmoji()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print(emoji)
-        print(emojiName)
-        emojiLabel.text = emoji
-        emojiNameLabel.text = emojiName
-        emojiCatLabel.text = emojiCat
-        emojiCreatedLabel.text = emojiCreated
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
     
-    
-
+    func showEmoji() {
+        
+        emojiLabel.text = emoji.emojiView
+        emojiNameLabel.text = emoji.emojiTitle
+        emojiCatLabel.text = "Category: \(emoji.emojiCategory)"
+        emojiCreatedLabel.text = "Created: \(emoji.emojiCreation)"
+        
+    }
 
 }

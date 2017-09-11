@@ -20,14 +20,19 @@
         <!--Emoji Dictionary-->
         <scene sceneID="wKw-Yp-zdK">
             <objects>
-                <tableViewController id="XJ8-fV-QRk" customClass="MainTableViewController" customModule="emojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XJ8-fV-QRk" customClass="MainTableViewController" customModule="emojiMeaning" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZEA-Cr-ipP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="afg-8w-peU">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rQJ-sz-zmN" detailTextLabel="jet-rW-yz7" style="IBUITableViewCellStyleValue1" id="XEN-E8-3cf">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rQJ-sz-zmN" detailTextLabel="jet-rW-yz7" style="IBUITableViewCellStyleValue1" id="XEN-E8-3cf" customClass="BigTextTableViewCell" customModule="emojiMeaning" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XEN-E8-3cf" id="8gq-Xc-DZV">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -49,9 +54,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="8lg-dV-aVe" kind="show" identifier="goToDetail" id="oWd-ZD-yz6"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,6 +64,10 @@
                     <navigationItem key="navigationItem" title="Emoji Dictionary" id="e71-ts-aAz">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xUs-XX-HnD"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="afg-8w-peU" id="2X3-Y8-0eG"/>
+                        <segue destination="8lg-dV-aVe" kind="show" identifier="detail" id="Iaq-fR-YzL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Mi-oh-MIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +76,7 @@
         <!--Emoji Name-->
         <scene sceneID="p36-H2-lXr">
             <objects>
-                <viewController id="8lg-dV-aVe" customClass="DetailViewController" customModule="emojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8lg-dV-aVe" customClass="DetailViewController" customModule="emojiMeaning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2uG-4G-nBt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

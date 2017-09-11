@@ -11,16 +11,19 @@ import UIKit
 class MainTableViewController: UITableViewController {
 
     // Variables
-    var emoji = ""
-    var emojiName = ""
-    // Imports
+    
+    var emojiArray : [Emoji] = []
+    
+   
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emojiArray = Emoji().createEmoji()
     }
 
+   
 
     // MARK: - Table view data source
 
@@ -36,27 +39,25 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        emoji = emojiArray[indexPath.row]
-        emojiName = emojiNames[indexPath.row]
         
-        cell.textLabel?.text = emoji
-        cell.detailTextLabel?.text = emojiName
+        let emoji = emojiArray[indexPath.row]
         
-        cell.textLabel?.font = UIFont(name: "Futura", size: 30)
-        cell.detailTextLabel?.font = UIFont(name: "Futura", size: 30)
+        cell.textLabel?.text = emoji.emojiView
+        cell.detailTextLabel?.text = emoji.emojiTitle
         
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emoji = emojiArray[indexPath.row]
+        performSegue(withIdentifier: "detail", sender: emoji)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let emojiVC = segue.destination as! DetailViewController
-        var path = tableView.indexPathForSelectedRow
-        emojiVC.emoji = emojiArray[(path?.row)!]
-        emojiVC.emojiName = emojiNames[(path?.row)!]
-        emojiVC.emojiCat = emojiCat[(path?.row)!]
-        emojiVC.emojiCreated = emojiDate[(path?.row)!]
+        emojiVC.emoji = sender as! Emoji
+       
     }
     
    
