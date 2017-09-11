@@ -55,7 +55,8 @@ class MainTableViewController: UITableViewController {
         var path = tableView.indexPathForSelectedRow
         emojiVC.emoji = emojiArray[(path?.row)!]
         emojiVC.emojiName = emojiNames[(path?.row)!]
-        
+        emojiVC.emojiCat = emojiCat[(path?.row)!]
+        emojiVC.emojiCreated = emojiDate[(path?.row)!]
     }
     
    
