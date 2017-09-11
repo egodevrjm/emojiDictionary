@@ -17,6 +17,7 @@
 		70F44AE51F66E31900B8FCEC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AE41F66E31900B8FCEC /* DetailViewController.swift */; };
 		70F44AE71F670F7900B8FCEC /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AE61F670F7900B8FCEC /* Emoji.swift */; };
 		70F44AE91F6715BE00B8FCEC /* BigTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AE81F6715BE00B8FCEC /* BigTextTableViewCell.swift */; };
+		70F44AEB1F6723DB00B8FCEC /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AEA1F6723DB00B8FCEC /* Colours.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		70F44AE41F66E31900B8FCEC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		70F44AE61F670F7900B8FCEC /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		70F44AE81F6715BE00B8FCEC /* BigTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextTableViewCell.swift; sourceTree = "<group>"; };
+		70F44AEA1F6723DB00B8FCEC /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				70F44AE81F6715BE00B8FCEC /* BigTextTableViewCell.swift */,
 				70F44AE41F66E31900B8FCEC /* DetailViewController.swift */,
 				70F44AE61F670F7900B8FCEC /* Emoji.swift */,
+				70F44AEA1F6723DB00B8FCEC /* Colours.swift */,
 				70F44AB21F66DA1400B8FCEC /* AppDelegate.swift */,
 				70F44AB61F66DA1400B8FCEC /* Main.storyboard */,
 				70F44AB91F66DA1400B8FCEC /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F44AE91F6715BE00B8FCEC /* BigTextTableViewCell.swift in Sources */,
+				70F44AEB1F6723DB00B8FCEC /* Colours.swift in Sources */,
 				70F44AE71F670F7900B8FCEC /* Emoji.swift in Sources */,
 				70F44AE11F66DA7200B8FCEC /* MainTableViewController.swift in Sources */,
 				70F44AB31F66DA1400B8FCEC /* AppDelegate.swift in Sources */,
